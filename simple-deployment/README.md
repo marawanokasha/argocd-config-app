@@ -1,0 +1,1 @@
+The image for this deployment comes from the CI pipeline implemented in https://github.com/marawanokasha/python-helloworld
