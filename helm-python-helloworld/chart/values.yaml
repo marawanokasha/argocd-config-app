@@ -3,6 +3,6 @@ namespace:
 
 image:
   repository: marawanokasha/python-helloworld 
-  tag: v1.0.0
+  tag: latest
 
 replicaCount: 3
