@@ -1,0 +1,8 @@
+namespace:
+  name: helm-test
+
+image:
+  repository: marawanokasha/python-helloworld 
+  tag: v1.0.0
+
+replicaCount: 3
