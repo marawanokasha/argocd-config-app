@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: simple-nginx
+  namespace: {{ .Values.argoCDNamespace }}
+spec:
+  destination:
+    # irrelevant, because we hardcode the namespace for this particular application
+    namespace: simple-nginx
+    server: {{ .Values.serverUrl }}
+  project: {{ .Values.project }}
+  source:
+    path: child-apps/nginx-deployment
+    repoURL: {{ .Values.repoUrl }}
+    targetRevision: {{ .Values.revision }}
+  syncPolicy: {}

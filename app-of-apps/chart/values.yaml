@@ -1,0 +1,7 @@
+serverUrl: http://kubernetes.default.svc
+repoUrl: https://github.com/marawanokasha/argocd-config-app
+
+project: local-cluster-projects
+revision: HEAD
+
+argoCDNamespace: argocd

@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: simple-python-helloworld
+  namespace: {{ .Values.argoCDNamespace }}
+spec:
+  destination:
+    namespace: simple-python-helloworld
+    server: {{ .Values.serverUrl }}
+  project: {{ .Values.project }}
+  source:
+    path: child-apps/python-helloworld
+    repoURL: {{ .Values.repoUrl }}
+    targetRevision: {{ .Values.revision }}
+  syncPolicy: {}

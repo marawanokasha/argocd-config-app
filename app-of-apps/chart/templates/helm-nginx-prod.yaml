@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: helm-nginx-prod
+  namespace: {{ .Values.argoCDNamespace }}
+spec:
+  destination:
+    namespace: helm-nginx-prod
+    server: {{ .Values.serverUrl }}
+  project: {{ .Values.project }}
+  source:
+    helm:
+      valueFiles:
+        - ../vars/values-prod.yaml
+    path: child-apps/helm-nginx/chart
+    repoURL: {{ .Values.repoUrl }}
+    targetRevision: {{ .Values.revision }}
+  syncPolicy: {}

@@ -1,0 +1,10 @@
+apiVersion: v1
+name: argocd-app-of-apps
+description: App of Apps containing the different apps to deploy on the local cluster
+keywords:
+- app of apps
+- argocd
+version: 1.0.0
+maintainers:
+- name: Marawan Shalaby 
+  email: marawanokasha@yahoo.com
