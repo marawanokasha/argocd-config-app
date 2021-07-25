@@ -1,4 +1,4 @@
-serverUrl: http://kubernetes.default.svc
+serverUrl: https://kubernetes.default.svc
 repoUrl: https://github.com/marawanokasha/argocd-config-app
 
 project: local-cluster-projects
