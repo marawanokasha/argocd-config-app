@@ -4,7 +4,6 @@ metadata:
   labels:
     app: python-helloworld
   name: python-helloworld
-  namespace: demo 
 spec:
   replicas: 3
   selector:

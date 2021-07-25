@@ -1,0 +1,9 @@
+apiVersion: v2
+name: helm-nginx
+description: Install an Nginx chart
+keywords:
+- nginx
+version: 1.0.0
+maintainers:
+- name: Marawan Shalaby 
+  email: marawanokasha@yahoo.com

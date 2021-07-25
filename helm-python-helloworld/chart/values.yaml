@@ -1,8 +1,0 @@
-namespace:
-  name: helm-test
-
-image:
-  repository: marawanokasha/python-helloworld 
-  tag: latest
-
-replicaCount: 3

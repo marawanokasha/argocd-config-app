@@ -1,0 +1,20 @@
+replicas: 3
+image:
+  name: nginx
+  tag: alpine
+  pullPolicy: IfNotPresent
+
+service:
+  port: 8111
+  type: ClusterIP
+
+config:
+  version: alpine
+  
+resources:
+  limits:
+    cpu: 50m
+    memory: 256Mi
+  requests:
+    cpu: 50m
+    memory: 256Mi

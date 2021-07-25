@@ -1,0 +1,17 @@
+replicas: 2
+
+image:
+  name: nginx
+  tag: 1.17.0
+  pullPolicy: IfNotPresent
+
+config:
+  version: 1.17.0
+
+resources:
+  limits:
+    cpu: 70m
+    memory: 256Mi
+  requests:
+    cpu: 70m
+    memory: 256Mi

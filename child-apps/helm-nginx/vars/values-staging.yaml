@@ -1,0 +1,17 @@
+replicas: 1
+
+image:
+  name: nginx
+  tag: 1.18.0
+  pullPolicy: IfNotPresent
+
+config:
+  version: 1.18.0
+  
+resources:
+  limits:
+    cpu: 50m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 128Mi
