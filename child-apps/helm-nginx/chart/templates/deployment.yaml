@@ -22,7 +22,8 @@ spec:
       - image: {{ .Values.image.name }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: {{ include "app.name" . }}
-        resources: {{ .Values.resources }}
+        resources: 
+          {{- toYaml .Values.resources | nindent 10 }}
   strategy:
     rollingUpdate:
       maxSurge: 25%
