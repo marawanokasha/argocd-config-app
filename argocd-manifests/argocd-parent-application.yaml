@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-apps
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: local-cluster-projects
+  source:
+    path: parent-app/argocd-parent-application/chart
+    repoURL: https://github.com/marawanokasha/argocd-config-app
+    targetRevision: HEAD
+  syncPolicy: {}
