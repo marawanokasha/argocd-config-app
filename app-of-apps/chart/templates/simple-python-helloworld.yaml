@@ -12,4 +12,7 @@ spec:
     path: child-apps/python-helloworld
     repoURL: {{ .Values.repoUrl }}
     targetRevision: {{ .Values.revision }}
-  syncPolicy: {}
+  syncPolicy:
+    syncOptions:     # Sync options which modifies sync behavior
+    - CreateNamespace=true # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.
+    
