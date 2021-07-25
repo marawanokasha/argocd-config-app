@@ -10,7 +10,7 @@ spec:
     server: {{ .Values.serverUrl }}
   project: {{ .Values.project }}
   source:
-    path: child-apps/nginx-deployment
+    path: child-apps/nginx
     repoURL: {{ .Values.repoUrl }}
     targetRevision: {{ .Values.revision }}
   syncPolicy: {}
